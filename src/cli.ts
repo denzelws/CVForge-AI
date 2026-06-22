@@ -1,3 +1,4 @@
+import { analyzeJobWorkflow } from "./workflow/analyzeJobWorkflow.js";
 import { generateCvWorkflow } from "./workflow/generateCvWorkflow.js";
 import { renderTestWorkflow } from "./workflow/renderTestWorkflow.js";
 import { setupTemplateWorkflow } from "./workflow/setupTemplateWorkflow.js";
@@ -45,6 +46,7 @@ Commands:
   npm run template:analyze -- --template frontend-model.docx
   yarn render:test -- --template frontend-model
   yarn profile:validate
+  yarn job:analyze -- --job example-frontend-jr
   npm run generate -- --template frontend-model --job example-frontend-jr
 `);
 }
@@ -87,6 +89,19 @@ async function main(): Promise<void> {
     console.log(`Projects: ${result.summary.projects}`);
     console.log(`Certifications: ${result.summary.certifications}`);
     console.log(`Languages: ${result.summary.languages}`);
+    return;
+  }
+
+  if (command === "job:analyze") {
+    const job = requireStringFlag(flags, "job");
+    const { analysis, outputPath } = analyzeJobWorkflow(job);
+    console.log(`Job title: ${analysis.jobTitle}`);
+    console.log(`Seniority: ${analysis.seniority}`);
+    console.log(`Language: ${analysis.language}`);
+    console.log(`Required skills: ${analysis.requiredSkills.join(", ") || "none"}`);
+    console.log(`Nice-to-have skills: ${analysis.niceToHaveSkills.join(", ") || "none"}`);
+    console.log(`Resume focus: ${analysis.resumeFocus.join(", ") || "none"}`);
+    console.log(`Output: ${outputPath}`);
     return;
   }
 

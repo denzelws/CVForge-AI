@@ -1,0 +1,52 @@
+{
+  "jobTitle": "Junior Frontend Developer",
+  "seniority": "junior",
+  "requiredSkills": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Figma",
+    "Accessibility",
+    "Responsive Design",
+    "Design Systems"
+  ],
+  "niceToHaveSkills": [],
+  "responsibilities": [
+    "Build UI components with React and TypeScript.",
+    "Translate Figma designs into accessible, responsive pages.",
+    "Work with senior engineers through code reviews and pair programming.",
+    "Write basic tests for user-facing components.",
+    "We are looking for a junior frontend developer to help build responsive web applications for customers in the education sector."
+  ],
+  "keywords": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Figma",
+    "Accessibility",
+    "Responsive Design",
+    "Design Systems",
+    "Junior",
+    "Frontend",
+    "Developer"
+  ],
+  "resumeFocus": [
+    "React component development",
+    "type-safe frontend code",
+    "Figma handoff",
+    "accessible UI",
+    "responsive interfaces",
+    "component testing",
+    "collaboration with engineering teams"
+  ],
+  "language": "en",
+  "notes": [
+    "No explicit nice-to-have skills section was detected."
+  ]
+}

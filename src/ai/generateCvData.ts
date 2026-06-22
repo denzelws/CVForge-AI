@@ -26,14 +26,14 @@ export function generateCvData(profile: Profile, job: JobAnalysis): CvData {
   return CvDataSchema.parse({
     basics: {
       name: profile.basics.name,
-      targetRole: job.title || profile.basics.targetRoles[0],
+      targetRole: job.jobTitle || profile.basics.targetRoles[0],
       email: profile.basics.email,
       phone: profile.basics.phone,
       location: profile.basics.location,
       linkedin: profile.basics.linkedin,
       github: profile.basics.github,
       portfolio: profile.basics.portfolio,
-      summary: `${profile.basics.summaryBase} Targeting ${job.title.toLowerCase()} roles with emphasis on ${job.keywords.slice(0, 5).join(", ")}.`
+      summary: `${profile.basics.summaryBase} Targeting ${job.jobTitle.toLowerCase()} roles with emphasis on ${job.keywords.slice(0, 5).join(", ")}.`
     },
     skills: {
       technicalText: skills.map((skill) => skill.name).join(" · ")
@@ -56,7 +56,7 @@ export function generateCvData(profile: Profile, job: JobAnalysis): CvData {
       item.evidence ? `${item.language} - ${item.level} (${item.evidence})` : `${item.language} - ${item.level}`
     ),
     meta: {
-      targetRole: job.title,
+      targetRole: job.jobTitle,
       jobKeywords: job.keywords,
       generatedAt: new Date().toISOString()
     }

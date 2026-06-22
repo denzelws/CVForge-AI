@@ -8,6 +8,7 @@
     "template:analyze": "tsc && node dist/cli.js template:analyze",
     "render:test": "tsc && node dist/cli.js render:test",
     "profile:validate": "tsc && node dist/cli.js profile:validate",
+    "job:analyze": "tsc && node dist/cli.js job:analyze",
     "generate": "tsc && node dist/cli.js generate",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
