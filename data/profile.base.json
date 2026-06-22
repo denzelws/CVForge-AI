@@ -69,10 +69,51 @@
       ]
     },
     {
-      "name": "Accessibility and Responsive UI",
+      "name": "HTML",
       "level": "practical",
       "evidence": [
-        "Construcao de interfaces responsivas com foco em usabilidade, formularios e consistencia visual."
+        "Desenvolvimento de interfaces e aplicacoes web sob demanda na Lacere Agencia.",
+        "Construcao de telas corporativas, componentes reutilizaveis e formularios no Bradesco Seguros."
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "practical",
+      "evidence": [
+        "Construiu telas modernas, reutilizaveis e responsivas a partir de mockups, prototipos e guidelines de marca na Lacere Agencia.",
+        "Aplicou consistencia visual, responsividade e usabilidade em interfaces web e projetos pessoais."
+      ]
+    },
+    {
+      "name": "Responsive Design",
+      "level": "practical",
+      "evidence": [
+        "Construcao de interfaces responsivas com foco em usabilidade, formularios e consistencia visual.",
+        "Sistema de Telemetria: dashboard responsivo para monitoramento de dados meteorologicos em tempo real."
+      ]
+    },
+    {
+      "name": "Figma",
+      "level": "practical",
+      "evidence": [
+        "Lacere Agencia: construcao de telas a partir de mockups, prototipos e guidelines de marca.",
+        "Colaboracao com designer e cliente internacional em requisitos, implementacao, criterios de aceite e ajustes iterativos."
+      ]
+    },
+    {
+      "name": "Accessibility",
+      "level": "basic",
+      "evidence": [
+        "Experiencia com formularios, validacoes, estados de carregamento/erro e feedbacks claros para usuarios internos.",
+        "Construcao de interfaces com foco em usabilidade e boa experiencia do usuario."
+      ]
+    },
+    {
+      "name": "Design Systems",
+      "level": "basic",
+      "evidence": [
+        "Construcao de componentes reutilizaveis em interfaces corporativas e projetos web.",
+        "Uso de guidelines de marca e consistencia visual em projetos freelance para a Lacere Agencia."
       ]
     }
   ],

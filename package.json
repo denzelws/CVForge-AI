@@ -9,6 +9,7 @@
     "render:test": "tsc && node dist/cli.js render:test",
     "profile:validate": "tsc && node dist/cli.js profile:validate",
     "job:analyze": "tsc && node dist/cli.js job:analyze",
+    "job:match": "tsc && node dist/cli.js job:match",
     "generate": "tsc && node dist/cli.js generate",
     "build": "tsc",
     "typecheck": "tsc --noEmit"

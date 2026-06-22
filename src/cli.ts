@@ -1,5 +1,6 @@
 import { analyzeJobWorkflow } from "./workflow/analyzeJobWorkflow.js";
 import { generateCvWorkflow } from "./workflow/generateCvWorkflow.js";
+import { matchJobWorkflow } from "./workflow/matchJobWorkflow.js";
 import { renderTestWorkflow } from "./workflow/renderTestWorkflow.js";
 import { setupTemplateWorkflow } from "./workflow/setupTemplateWorkflow.js";
 import { validateProfileWorkflow } from "./workflow/validateProfileWorkflow.js";
@@ -47,6 +48,7 @@ Commands:
   yarn render:test -- --template frontend-model
   yarn profile:validate
   yarn job:analyze -- --job example-frontend-jr
+  yarn job:match -- --job example-frontend-jr
   npm run generate -- --template frontend-model --job example-frontend-jr
 `);
 }
@@ -101,6 +103,20 @@ async function main(): Promise<void> {
     console.log(`Required skills: ${analysis.requiredSkills.join(", ") || "none"}`);
     console.log(`Nice-to-have skills: ${analysis.niceToHaveSkills.join(", ") || "none"}`);
     console.log(`Resume focus: ${analysis.resumeFocus.join(", ") || "none"}`);
+    console.log(`Output: ${outputPath}`);
+    return;
+  }
+
+  if (command === "job:match") {
+    const job = requireStringFlag(flags, "job");
+    const { report, outputPath } = matchJobWorkflow(job);
+    console.log(`Match score: ${report.matchScore}`);
+    console.log(`Decision: ${report.decision}`);
+    console.log(`Matched skills: ${report.matchedSkills.map((item) => item.skill).join(", ") || "none"}`);
+    console.log(`Missing skills: ${report.missingSkills.join(", ") || "none"}`);
+    console.log(`Uncertain skills: ${report.uncertainSkills.map((item) => item.skill).join(", ") || "none"}`);
+    console.log(`Recommended projects: ${report.recommendedProjects.join(", ") || "none"}`);
+    console.log(`Recommended experience: ${report.recommendedExperience.join(", ") || "none"}`);
     console.log(`Output: ${outputPath}`);
     return;
   }

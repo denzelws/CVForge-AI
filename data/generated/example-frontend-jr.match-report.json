@@ -1,0 +1,111 @@
+{
+  "jobName": "example-frontend-jr",
+  "matchScore": 81,
+  "decision": "good_match",
+  "matchedSkills": [
+    {
+      "skill": "React",
+      "profileLevel": "professional",
+      "evidence": [
+        "Uso em projetos freelance, projetos pessoais e interfaces corporativas.",
+        "Construcao de componentes reutilizaveis, formularios, estados e telas responsivas."
+      ]
+    },
+    {
+      "skill": "TypeScript",
+      "profileLevel": "professional",
+      "evidence": [
+        "Uso recorrente em front-end, back-end Node.js e validacoes com Zod.",
+        "Aplicado em projetos como WeekFlow e sistemas com APIs REST."
+      ]
+    },
+    {
+      "skill": "JavaScript",
+      "profileLevel": "practical",
+      "evidence": [
+        "Desenvolvedor Frontend / Full Stack at Bradesco Seguros"
+      ]
+    },
+    {
+      "skill": "HTML",
+      "profileLevel": "practical",
+      "evidence": [
+        "Desenvolvimento de interfaces e aplicacoes web sob demanda na Lacere Agencia.",
+        "Construcao de telas corporativas, componentes reutilizaveis e formularios no Bradesco Seguros."
+      ]
+    },
+    {
+      "skill": "CSS",
+      "profileLevel": "practical",
+      "evidence": [
+        "Construiu telas modernas, reutilizaveis e responsivas a partir de mockups, prototipos e guidelines de marca na Lacere Agencia.",
+        "Aplicou consistencia visual, responsividade e usabilidade em interfaces web e projetos pessoais."
+      ]
+    },
+    {
+      "skill": "Git",
+      "profileLevel": "practical",
+      "evidence": [
+        "Desenvolvedor Frontend / Full Stack at Bradesco Seguros"
+      ]
+    },
+    {
+      "skill": "Figma",
+      "profileLevel": "practical",
+      "evidence": [
+        "Lacere Agencia: construcao de telas a partir de mockups, prototipos e guidelines de marca.",
+        "Colaboracao com designer e cliente internacional em requisitos, implementacao, criterios de aceite e ajustes iterativos."
+      ]
+    },
+    {
+      "skill": "Responsive Design",
+      "profileLevel": "practical",
+      "evidence": [
+        "Construcao de interfaces responsivas com foco em usabilidade, formularios e consistencia visual.",
+        "Sistema de Telemetria: dashboard responsivo para monitoramento de dados meteorologicos em tempo real."
+      ]
+    }
+  ],
+  "missingSkills": [],
+  "uncertainSkills": [
+    {
+      "skill": "Accessibility",
+      "reason": "Profile skill exists with basic level, so it should be verified before presenting strongly.",
+      "questionForUser": "Can you provide concrete evidence for Accessibility in work, projects, or study?"
+    },
+    {
+      "skill": "Design Systems",
+      "reason": "Profile skill exists with basic level, so it should be verified before presenting strongly.",
+      "questionForUser": "Can you provide concrete evidence for Design Systems in work, projects, or study?"
+    }
+  ],
+  "recommendedFocus": [
+    "React component development",
+    "type-safe frontend code",
+    "Figma handoff",
+    "accessible UI",
+    "responsive interfaces",
+    "component testing",
+    "collaboration with engineering teams",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "recommendedProjects": [
+    "Sistema de Telemetria",
+    "Sistema de Agendamento com Controle de Concorrencia",
+    "WeekFlow"
+  ],
+  "recommendedExperience": [
+    "Desenvolvedor Frontend / Full Stack at Bradesco Seguros",
+    "Desenvolvedor Frontend / Full Stack at Lacere Agencia"
+  ],
+  "warnings": [
+    "Some skills are related or low-confidence and should not be overstated."
+  ],
+  "notes": [
+    "Matched 8 of 10 required skills as practical/professional or technology-backed evidence."
+  ]
+}
