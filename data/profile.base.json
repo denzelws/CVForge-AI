@@ -1,0 +1,212 @@
+{
+  "basics": {
+    "name": "Denzel Washington Santana Barbosa",
+    "targetRoles": [
+      "Frontend Developer Junior",
+      "Full Stack Developer Junior",
+      "React Developer",
+      "TypeScript Developer"
+    ],
+    "email": "denzelwashingtonsantana@gmail.com",
+    "phone": "+55 21 98078-3640",
+    "location": "Rio de Janeiro, RJ, Brazil",
+    "linkedin": "https://www.linkedin.com/in/dzwashington/",
+    "github": "https://github.com/denzelws",
+    "portfolio": "https://denzelws.vercel.app/",
+    "summaryBase": "Desenvolvedor fullstack com experiencia pratica desde 2022 em sistemas corporativos, projetos freelance e aplicacoes publicas no GitHub. Atua com React, TypeScript, JavaScript, Node.js, NestJS, APIs REST, GraphQL, PostgreSQL, MongoDB, Docker, testes automatizados, documentacao tecnica e melhoria continua."
+  },
+  "skills": [
+    {
+      "name": "React",
+      "level": "professional",
+      "evidence": [
+        "Uso em projetos freelance, projetos pessoais e interfaces corporativas.",
+        "Construcao de componentes reutilizaveis, formularios, estados e telas responsivas."
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "professional",
+      "evidence": [
+        "Uso recorrente em front-end, back-end Node.js e validacoes com Zod.",
+        "Aplicado em projetos como WeekFlow e sistemas com APIs REST."
+      ]
+    },
+    {
+      "name": "Node.js",
+      "level": "practical",
+      "evidence": [
+        "Desenvolvimento de servicos e APIs em projetos pessoais e profissionais.",
+        "Uso com NestJS, Fastify e integracoes."
+      ]
+    },
+    {
+      "name": "NestJS",
+      "level": "practical",
+      "evidence": [
+        "Aplicado em projeto de telemetria com APIs, MongoDB, RabbitMQ e Docker."
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "practical",
+      "evidence": [
+        "Uso em modelagem relacional, constraints e transacoes em projeto de agendamento."
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "practical",
+      "evidence": [
+        "Conteinerizacao de servicos para ambientes reproduziveis em projetos backend/fullstack."
+      ]
+    },
+    {
+      "name": "Testing",
+      "level": "practical",
+      "evidence": [
+        "Uso de Jest, Vitest, Cypress e Testing Library em projetos e contexto corporativo."
+      ]
+    },
+    {
+      "name": "Accessibility and Responsive UI",
+      "level": "practical",
+      "evidence": [
+        "Construcao de interfaces responsivas com foco em usabilidade, formularios e consistencia visual."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Desenvolvedor Frontend / Full Stack",
+      "company": "Bradesco Seguros",
+      "type": "Estagio",
+      "location": "Rio de Janeiro, RJ",
+      "period": "Nov 2023 - Dez 2025",
+      "bullets": [
+        "Desenvolveu e manteve interfaces corporativas, integracoes e servicos utilizando Angular, React, TypeScript, JavaScript, Node.js, Java e APIs REST.",
+        "Construiu telas, componentes reutilizaveis e formularios com validacoes, estados de carregamento, estados de erro e feedbacks claros.",
+        "Consumiu e integrou APIs REST, tratando dados, validacoes e comunicacao entre front-end e servicos internos.",
+        "Apoiou correcao de bugs em producao, troubleshooting, refatoracao, analise de impacto e evolucao continua de aplicacoes corporativas.",
+        "Participou de code reviews, Pull Requests, testes automatizados, SonarQube, Git/Bitbucket, CI/CD e documentacao tecnica.",
+        "Implementou fluxo de carga em lote via upload de arquivos XLSX para automatizar inclusao repetitiva de dados e reduzir erros operacionais.",
+        "Apoiou a integracao inicial de arquitetura de microfrontends e a documentacao da abordagem para equipes terceiras."
+      ],
+      "technologies": [
+        "React",
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "Java",
+        "APIs REST",
+        "PostgreSQL",
+        "DB2",
+        "Docker",
+        "CI/CD",
+        "Git",
+        "Jest",
+        "Cypress",
+        "SonarQube"
+      ]
+    },
+    {
+      "title": "Desenvolvedor Frontend / Full Stack",
+      "company": "Lacere Agencia",
+      "type": "Freelancer",
+      "location": "Remoto",
+      "period": "2022 - Presente",
+      "bullets": [
+        "Desenvolveu interfaces e aplicacoes web sob demanda utilizando React, TypeScript, Vite.js, Node.js e APIs REST.",
+        "Construiu telas modernas, reutilizaveis e responsivas a partir de mockups, prototipos e guidelines de marca.",
+        "Colaborou com designer e cliente internacional, alinhando requisitos, implementacao, criterios de aceite e ajustes iterativos.",
+        "Consumiu APIs externas, tratou erros, estados assincronos, seguranca de dados no front-end e otimizacao de carregamento.",
+        "Realizou refatoracao continua, documentacao de decisoes tecnicas e testes automatizados com Jest/Vitest quando aplicavel."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Node.js",
+        "APIs REST",
+        "Jest",
+        "Vitest"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sistema de Telemetria",
+      "description": "Dashboard responsivo para monitoramento de dados meteorologicos em tempo real, conectando interface, APIs, mensageria e atualizacao assincrona.",
+      "stack": [
+        "React",
+        "Vite",
+        "Node.js",
+        "NestJS",
+        "MongoDB",
+        "RabbitMQ",
+        "Docker"
+      ],
+      "evidenceType": "personal",
+      "url": null,
+      "github": "https://github.com/denzelws/telemetry-dashboard"
+    },
+    {
+      "name": "Sistema de Agendamento com Controle de Concorrencia",
+      "description": "Aplicacao com fluxo de agendamento, disponibilidade de slots, formularios, validacoes, feedbacks e tratamento visual de conflitos.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Fastify",
+        "Supabase",
+        "PostgreSQL",
+        "Vitest",
+        "Cypress"
+      ],
+      "evidenceType": "personal",
+      "url": null,
+      "github": "https://github.com/denzelws/appointment-system"
+    },
+    {
+      "name": "WeekFlow",
+      "description": "Aplicacao pessoal de produtividade com planejamento semanal, priorizacao de tarefas, persistencia local e melhorias iterativas de UX.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Context API",
+        "Local Storage"
+      ],
+      "evidenceType": "personal",
+      "url": null,
+      "github": null
+    }
+  ],
+  "education": [
+    {
+      "institution": "IBMR",
+      "course": "Analise e Desenvolvimento de Sistemas",
+      "period": "2024 - 2026",
+      "status": "Em andamento"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "year": "2025"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Ingles",
+      "level": "C1",
+      "evidence": "EF SET"
+    },
+    {
+      "language": "Portugues",
+      "level": "Nativo",
+      "evidence": null
+    }
+  ]
+}

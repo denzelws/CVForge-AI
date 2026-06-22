@@ -1,0 +1,15 @@
+Junior Frontend Developer
+
+We are looking for a junior frontend developer to help build responsive web applications for customers in the education sector.
+
+Responsibilities:
+- Build UI components with React and TypeScript.
+- Translate Figma designs into accessible, responsive pages.
+- Work with senior engineers through code reviews and pair programming.
+- Write basic tests for user-facing components.
+
+Requirements:
+- Experience with HTML, CSS, JavaScript, React, and TypeScript.
+- Familiarity with Git and modern frontend tooling.
+- Interest in accessibility and design systems.
+- Strong communication and willingness to learn.

@@ -1,0 +1,25 @@
+{
+  "name": "cvforge-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local AI-assisted DOCX resume generator that preserves Word template design.",
+  "scripts": {
+    "template:analyze": "tsc && node dist/cli.js template:analyze",
+    "render:test": "tsc && node dist/cli.js render:test",
+    "profile:validate": "tsc && node dist/cli.js profile:validate",
+    "generate": "tsc && node dist/cli.js generate",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "docxtemplater": "^3.51.2",
+    "pizzip": "^3.1.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

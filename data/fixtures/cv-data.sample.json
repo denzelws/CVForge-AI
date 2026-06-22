@@ -1,0 +1,49 @@
+{
+  "basics": {
+    "name": "Denzel Washington Santana",
+    "targetRole": "Frontend Developer Junior",
+    "email": "denzelwashingtonsantana@gmail.com",
+    "phone": "+55 21 98078-3640",
+    "location": "Brazil",
+    "linkedin": "linkedin.com/in/example",
+    "github": "github.com/denzelws",
+    "portfolio": "denzelws.vercel.app",
+    "links": "GitHub: github.com/denzelws | LinkedIn: linkedin.com/in/example",
+    "summary": "Frontend developer focused on React, TypeScript, responsive interfaces, API integration, and practical software projects."
+  },
+  "skills": {
+    "technicalText": "React · TypeScript · JavaScript · TailwindCSS · REST APIs · Git"
+  },
+  "experience": [
+    {
+      "title": "Web Developer",
+      "company": "Lacere",
+      "period": "YYYY - YYYY",
+      "bullets": [
+        "Developed responsive web interfaces with attention to usability and layout consistency.",
+        "Implemented frontend components and technical adjustments for web projects."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "WeekFlow",
+      "description": "Personal productivity app with brain dump, weekly planning, backlog, focus mode, and local persistence.",
+      "stack": "React, TypeScript, Vite, Context API"
+    },
+    {
+      "name": "Schedulr Observability Lab",
+      "description": "Backend observability project using OpenTelemetry and SigNoz to inspect traces, logs, request flow, and concurrency behavior.",
+      "stack": "Node.js, Fastify, PostgreSQL, OpenTelemetry, SigNoz"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institution name",
+      "course": "Course name",
+      "period": "YYYY - YYYY"
+    }
+  ],
+  "certifications": ["Certification example"],
+  "languages": ["English - Intermediate"]
+}

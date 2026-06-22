@@ -1,0 +1,316 @@
+{
+  "text": "{basics.name}\n{basics.targetRole}\n{basics.phone} | {basics.location} | {basics.email}\nLinkedIn: {basics.linkedin}\nPortfolio: {basics.portfolio} | GitHub: {basics.github}\n\n\nResumo Profissional\n{basics.summary}\n\nCompetências Técnicas\n{skills.technicalText}\n\nExperiência Profissional\n{#experience}\n{title} — {company}\n{period}\n\n{#bullets}\n• {.}\n{/bullets}\n{/experience} \n\nProjetos Selecionados\n{#projects}\n{name}\n{description}\nStack: {stack}\n{/projects}\n\nFormação & Certificações\n{#education}\n{institution}\n{course}\n{period}\n{/education}\n\n{#certifications}\nCertificação: {.}\n{/certifications}\n\n{#languages}\nIdioma: {.}\n{/languages}",
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "{basics.name}"
+    },
+    {
+      "index": 1,
+      "text": "{basics.targetRole}"
+    },
+    {
+      "index": 2,
+      "text": "{basics.phone} | {basics.location} | {basics.email}"
+    },
+    {
+      "index": 3,
+      "text": "LinkedIn: {basics.linkedin}"
+    },
+    {
+      "index": 4,
+      "text": "Portfolio: {basics.portfolio} | GitHub: {basics.github}"
+    },
+    {
+      "index": 7,
+      "text": "Resumo Profissional"
+    },
+    {
+      "index": 8,
+      "text": "{basics.summary}"
+    },
+    {
+      "index": 10,
+      "text": "Competências Técnicas"
+    },
+    {
+      "index": 11,
+      "text": "{skills.technicalText}"
+    },
+    {
+      "index": 13,
+      "text": "Experiência Profissional"
+    },
+    {
+      "index": 14,
+      "text": "{#experience}"
+    },
+    {
+      "index": 15,
+      "text": "{title} — {company}"
+    },
+    {
+      "index": 16,
+      "text": "{period}"
+    },
+    {
+      "index": 18,
+      "text": "{#bullets}"
+    },
+    {
+      "index": 19,
+      "text": "• {.}"
+    },
+    {
+      "index": 20,
+      "text": "{/bullets}"
+    },
+    {
+      "index": 21,
+      "text": "{/experience}"
+    },
+    {
+      "index": 23,
+      "text": "Projetos Selecionados"
+    },
+    {
+      "index": 24,
+      "text": "{#projects}"
+    },
+    {
+      "index": 25,
+      "text": "{name}"
+    },
+    {
+      "index": 26,
+      "text": "{description}"
+    },
+    {
+      "index": 27,
+      "text": "Stack: {stack}"
+    },
+    {
+      "index": 28,
+      "text": "{/projects}"
+    },
+    {
+      "index": 30,
+      "text": "Formação & Certificações"
+    },
+    {
+      "index": 31,
+      "text": "{#education}"
+    },
+    {
+      "index": 32,
+      "text": "{institution}"
+    },
+    {
+      "index": 33,
+      "text": "{course}"
+    },
+    {
+      "index": 34,
+      "text": "{period}"
+    },
+    {
+      "index": 35,
+      "text": "{/education}"
+    },
+    {
+      "index": 37,
+      "text": "{#certifications}"
+    },
+    {
+      "index": 38,
+      "text": "Certificação: {.}"
+    },
+    {
+      "index": 39,
+      "text": "{/certifications}"
+    },
+    {
+      "index": 41,
+      "text": "{#languages}"
+    },
+    {
+      "index": 42,
+      "text": "Idioma: {.}"
+    },
+    {
+      "index": 43,
+      "text": "{/languages}"
+    }
+  ],
+  "tables": [],
+  "possibleSectionHeadings": [
+    {
+      "paragraphIndex": 7,
+      "text": "Resumo Profissional",
+      "reason": "matches common resume section name"
+    },
+    {
+      "paragraphIndex": 10,
+      "text": "Competências Técnicas",
+      "reason": "matches common resume section name"
+    },
+    {
+      "paragraphIndex": 13,
+      "text": "Experiência Profissional",
+      "reason": "matches common resume section name"
+    },
+    {
+      "paragraphIndex": 23,
+      "text": "Projetos Selecionados",
+      "reason": "short title-case section-like text"
+    },
+    {
+      "paragraphIndex": 27,
+      "text": "Stack: {stack}",
+      "reason": "short title-case section-like text"
+    },
+    {
+      "paragraphIndex": 30,
+      "text": "Formação & Certificações",
+      "reason": "short title-case section-like text"
+    }
+  ],
+  "variableCandidates": [
+    {
+      "source": "paragraph",
+      "index": 0,
+      "text": "{basics.name}",
+      "reason": "early short line, likely name/title/header field",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 1,
+      "text": "{basics.targetRole}",
+      "reason": "early short line, likely name/title/header field",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 2,
+      "text": "{basics.phone} | {basics.location} | {basics.email}",
+      "reason": "early short line, likely name/title/header field",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 3,
+      "text": "LinkedIn: {basics.linkedin}",
+      "reason": "early contact/header content",
+      "confidence": "high"
+    },
+    {
+      "source": "paragraph",
+      "index": 4,
+      "text": "Portfolio: {basics.portfolio} | GitHub: {basics.github}",
+      "reason": "early contact/header content",
+      "confidence": "high"
+    },
+    {
+      "source": "paragraph",
+      "index": 7,
+      "text": "Resumo Profissional",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 10,
+      "text": "Competências Técnicas",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 13,
+      "text": "Experiência Profissional",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 23,
+      "text": "Projetos Selecionados",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 27,
+      "text": "Stack: {stack}",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 30,
+      "text": "Formação & Certificações",
+      "reason": "section heading may control a variable resume block",
+      "confidence": "medium"
+    },
+    {
+      "source": "paragraph",
+      "index": 38,
+      "text": "Certificação: {.}",
+      "reason": "short labeled field",
+      "confidence": "low"
+    },
+    {
+      "source": "paragraph",
+      "index": 42,
+      "text": "Idioma: {.}",
+      "reason": "short labeled field",
+      "confidence": "low"
+    }
+  ],
+  "placeholders": [
+    "{basics.name}",
+    "{basics.targetRole}",
+    "{basics.phone}",
+    "{basics.location}",
+    "{basics.email}",
+    "{basics.linkedin}",
+    "{basics.portfolio}",
+    "{basics.github}",
+    "{basics.summary}",
+    "{skills.technicalText}",
+    "{#experience}",
+    "{title}",
+    "{company}",
+    "{period}",
+    "{#bullets}",
+    "{.}",
+    "{/bullets}",
+    "{/experience}",
+    "{#projects}",
+    "{name}",
+    "{description}",
+    "{stack}",
+    "{/projects}",
+    "{#education}",
+    "{institution}",
+    "{course}",
+    "{/education}",
+    "{#certifications}",
+    "{/certifications}",
+    "{#languages}",
+    "{/languages}"
+  ],
+  "loops": [
+    "experience",
+    "bullets",
+    "projects",
+    "education",
+    "certifications",
+    "languages"
+  ],
+  "templateName": "frontend-model",
+  "sourceDocx": "/home/denzelw/dev/resume-template-agent/templates/original/frontend-model.docx",
+  "outputPath": "/home/denzelw/dev/resume-template-agent/template-maps/frontend-model.structure.json",
+  "generatedAt": "2026-06-22T04:46:07.051Z"
+}

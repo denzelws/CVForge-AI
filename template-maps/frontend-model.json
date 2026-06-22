@@ -1,0 +1,171 @@
+{
+  "templateName": "frontend-model",
+  "originalDocx": "/home/denzelw/dev/resume-template-agent/templates/original/frontend-model.docx",
+  "preparedDocx": "/home/denzelw/dev/resume-template-agent/templates/prepared/frontend-model.docx",
+  "variables": [
+    {
+      "name": "basics.name",
+      "kind": "placeholder",
+      "raw": "{basics.name}"
+    },
+    {
+      "name": "basics.targetRole",
+      "kind": "placeholder",
+      "raw": "{basics.targetRole}"
+    },
+    {
+      "name": "basics.phone",
+      "kind": "placeholder",
+      "raw": "{basics.phone}"
+    },
+    {
+      "name": "basics.location",
+      "kind": "placeholder",
+      "raw": "{basics.location}"
+    },
+    {
+      "name": "basics.email",
+      "kind": "placeholder",
+      "raw": "{basics.email}"
+    },
+    {
+      "name": "basics.linkedin",
+      "kind": "placeholder",
+      "raw": "{basics.linkedin}"
+    },
+    {
+      "name": "basics.portfolio",
+      "kind": "placeholder",
+      "raw": "{basics.portfolio}"
+    },
+    {
+      "name": "basics.github",
+      "kind": "placeholder",
+      "raw": "{basics.github}"
+    },
+    {
+      "name": "basics.summary",
+      "kind": "placeholder",
+      "raw": "{basics.summary}"
+    },
+    {
+      "name": "skills.technicalText",
+      "kind": "placeholder",
+      "raw": "{skills.technicalText}"
+    },
+    {
+      "name": "experience",
+      "kind": "loopStart",
+      "raw": "{#experience}"
+    },
+    {
+      "name": "title",
+      "kind": "placeholder",
+      "raw": "{title}"
+    },
+    {
+      "name": "company",
+      "kind": "placeholder",
+      "raw": "{company}"
+    },
+    {
+      "name": "period",
+      "kind": "placeholder",
+      "raw": "{period}"
+    },
+    {
+      "name": "bullets",
+      "kind": "loopStart",
+      "raw": "{#bullets}"
+    },
+    {
+      "name": ".",
+      "kind": "placeholder",
+      "raw": "{.}"
+    },
+    {
+      "name": "bullets",
+      "kind": "loopEnd",
+      "raw": "{/bullets}"
+    },
+    {
+      "name": "experience",
+      "kind": "loopEnd",
+      "raw": "{/experience}"
+    },
+    {
+      "name": "projects",
+      "kind": "loopStart",
+      "raw": "{#projects}"
+    },
+    {
+      "name": "name",
+      "kind": "placeholder",
+      "raw": "{name}"
+    },
+    {
+      "name": "description",
+      "kind": "placeholder",
+      "raw": "{description}"
+    },
+    {
+      "name": "stack",
+      "kind": "placeholder",
+      "raw": "{stack}"
+    },
+    {
+      "name": "projects",
+      "kind": "loopEnd",
+      "raw": "{/projects}"
+    },
+    {
+      "name": "education",
+      "kind": "loopStart",
+      "raw": "{#education}"
+    },
+    {
+      "name": "institution",
+      "kind": "placeholder",
+      "raw": "{institution}"
+    },
+    {
+      "name": "course",
+      "kind": "placeholder",
+      "raw": "{course}"
+    },
+    {
+      "name": "education",
+      "kind": "loopEnd",
+      "raw": "{/education}"
+    },
+    {
+      "name": "certifications",
+      "kind": "loopStart",
+      "raw": "{#certifications}"
+    },
+    {
+      "name": "certifications",
+      "kind": "loopEnd",
+      "raw": "{/certifications}"
+    },
+    {
+      "name": "languages",
+      "kind": "loopStart",
+      "raw": "{#languages}"
+    },
+    {
+      "name": "languages",
+      "kind": "loopEnd",
+      "raw": "{/languages}"
+    }
+  ],
+  "loops": [
+    "experience",
+    "bullets",
+    "projects",
+    "education",
+    "certifications",
+    "languages"
+  ],
+  "generatedAt": "2026-06-22T04:46:07.056Z"
+}

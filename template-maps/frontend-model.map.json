@@ -1,0 +1,142 @@
+{
+  "templateName": "frontend-model",
+  "detectedSections": [
+    "Resumo Profissional",
+    "Competências Técnicas",
+    "Experiência Profissional",
+    "Projetos Selecionados",
+    "Stack: {stack}",
+    "Formação & Certificações"
+  ],
+  "variables": [
+    {
+      "field": "basics.name",
+      "currentText": "{basics.name}",
+      "suggestedPlaceholder": "{basics.name}",
+      "section": "Header",
+      "confidence": "high",
+      "reason": "Text before the first section heading appears to be the candidate name.",
+      "replacementType": "single"
+    },
+    {
+      "field": "basics.targetRole",
+      "currentText": "{basics.targetRole}",
+      "suggestedPlaceholder": "{basics.targetRole}",
+      "section": "Header",
+      "confidence": "high",
+      "reason": "Second header line appears to be the target role or professional title.",
+      "replacementType": "single"
+    },
+    {
+      "field": "basics.location",
+      "currentText": "{basics.phone}",
+      "suggestedPlaceholder": "{basics.location}",
+      "section": "Header",
+      "confidence": "high",
+      "reason": "Header contact line contains a location segment.",
+      "replacementType": "single"
+    },
+    {
+      "field": "basics.linkedin",
+      "currentText": "LinkedIn: {basics.linkedin}",
+      "suggestedPlaceholder": "{basics.linkedin}",
+      "section": "Header",
+      "confidence": "high",
+      "reason": "Header contains a LinkedIn URL.",
+      "replacementType": "single"
+    },
+    {
+      "field": "basics.github",
+      "currentText": "Portfolio: {basics.portfolio} | GitHub: {basics.github}",
+      "suggestedPlaceholder": "{basics.github}",
+      "section": "Header",
+      "confidence": "medium",
+      "reason": "Header contains a GitHub URL, possibly alongside another profile URL.",
+      "replacementType": "single"
+    },
+    {
+      "field": "basics.summary",
+      "currentText": "{basics.summary}",
+      "suggestedPlaceholder": "{basics.summary}",
+      "section": "Resumo Profissional",
+      "confidence": "high",
+      "reason": "This section contains the professional summary and should be tailored per job.",
+      "replacementType": "single"
+    },
+    {
+      "field": "skills.technical",
+      "currentText": "{skills.technicalText}",
+      "suggestedPlaceholder": "{#skills.technical}{.}{/skills.technical}",
+      "section": "Competências Técnicas",
+      "confidence": "high",
+      "reason": "This section contains grouped technical skills that should be tailored to the job requirements.",
+      "replacementType": "list"
+    },
+    {
+      "field": "experience",
+      "currentText": "{#experience}\n{title} — {company}\n{period}\n{#bullets}\n• {.}\n{/bullets}\n{/experience}",
+      "suggestedPlaceholder": "{#experience}...{/experience}",
+      "section": "Experiência Profissional",
+      "confidence": "high",
+      "reason": "This section contains job history entries and bullets that should repeat from structured experience data.",
+      "replacementType": "repeating_block"
+    },
+    {
+      "field": "projects",
+      "currentText": "{#projects}\n{name}\n{description}",
+      "suggestedPlaceholder": "{#projects}...{/projects}",
+      "section": "Projetos Selecionados",
+      "confidence": "high",
+      "reason": "This section contains selected project entries that should repeat from structured project data.",
+      "replacementType": "repeating_block"
+    },
+    {
+      "field": "certifications",
+      "currentText": "Certificação: {.}",
+      "suggestedPlaceholder": "{#certifications}...{/certifications}",
+      "section": "Formação & Certificações",
+      "confidence": "high",
+      "reason": "This content describes certifications and should come from structured certification data.",
+      "replacementType": "list"
+    },
+    {
+      "field": "languages",
+      "currentText": "Idioma: {.}",
+      "suggestedPlaceholder": "{#languages}...{/languages}",
+      "section": "Formação & Certificações",
+      "confidence": "high",
+      "reason": "This content describes languages and should come from structured language data.",
+      "replacementType": "list"
+    }
+  ],
+  "fixedSections": [
+    {
+      "text": "Resumo Profissional",
+      "reason": "Section heading should remain fixed."
+    },
+    {
+      "text": "Competências Técnicas",
+      "reason": "Section heading should remain fixed."
+    },
+    {
+      "text": "Experiência Profissional",
+      "reason": "Section heading should remain fixed."
+    },
+    {
+      "text": "Projetos Selecionados",
+      "reason": "Section heading should remain fixed."
+    },
+    {
+      "text": "Stack: {stack}",
+      "reason": "Section heading should remain fixed."
+    },
+    {
+      "text": "Formação & Certificações",
+      "reason": "Section heading should remain fixed."
+    }
+  ],
+  "warnings": [
+    "GitHub and portfolio appear on the same line. Split them manually if both should become separate placeholders."
+  ],
+  "outputPath": "/home/denzelw/dev/resume-template-agent/template-maps/frontend-model.map.json"
+}
