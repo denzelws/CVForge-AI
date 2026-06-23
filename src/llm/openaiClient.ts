@@ -13,6 +13,8 @@ type ChatCompletionResponse = {
   }>;
   error?: {
     message?: string;
+    code?: string;
+    type?: string;
   };
 };
 
@@ -34,6 +36,35 @@ function parseJsonObject(content: string): unknown {
 
     return JSON.parse(content.slice(firstBrace, lastBrace + 1));
   }
+}
+
+function isQuotaOrBillingError(message: string, code?: string): boolean {
+  const value = `${message} ${code ?? ""}`.toLowerCase();
+  return (
+    value.includes("exceeded your current quota") ||
+    value.includes("billing") ||
+    value.includes("quota") ||
+    value.includes("insufficient_quota")
+  );
+}
+
+function formatOpenAiError(payload: ChatCompletionResponse, fallbackMessage: string): Error {
+  const originalMessage = payload.error?.message ?? fallbackMessage;
+
+  if (isQuotaOrBillingError(originalMessage, payload.error?.code)) {
+    return new Error(
+      [
+        "OpenAI API quota/billing issue detected.",
+        "Your API key was loaded, but the OpenAI Platform project/account does not currently have available API quota.",
+        "Check Platform Billing, Usage, and Project Limits.",
+        "ChatGPT Plus/Codex usage does not include API usage.",
+        "",
+        `Original OpenAI error: ${originalMessage}`
+      ].join("\n")
+    );
+  }
+
+  return new Error(`OpenAI API request failed: ${originalMessage}`);
 }
 
 export async function generateJsonWithOpenAI(request: OpenAiJsonRequest): Promise<unknown> {
@@ -60,7 +91,7 @@ export async function generateJsonWithOpenAI(request: OpenAiJsonRequest): Promis
   const payload = (await response.json()) as ChatCompletionResponse;
 
   if (!response.ok) {
-    throw new Error(`OpenAI API request failed: ${payload.error?.message ?? response.statusText}`);
+    throw formatOpenAiError(payload, response.statusText);
   }
 
   const content = payload.choices?.[0]?.message?.content;

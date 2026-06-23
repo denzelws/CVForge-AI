@@ -1,4 +1,7 @@
+import dotenv from "dotenv";
 import { z } from "zod";
+
+dotenv.config({ override: false, quiet: true });
 
 const DEFAULT_OPENAI_MODEL = "gpt-4o-mini";
 
