@@ -1,0 +1,71 @@
+{
+  "basics": {
+    "name": "Denzel Washington Santana Barbosa",
+    "targetRole": "Junior Frontend Developer",
+    "email": "denzelwashingtonsantana@gmail.com",
+    "phone": "+55 21 98078-3640",
+    "location": "Rio de Janeiro, RJ, Brazil",
+    "linkedin": "https://www.linkedin.com/in/dzwashington/",
+    "github": "https://github.com/denzelws",
+    "portfolio": "https://denzelws.vercel.app/",
+    "summary": "Desenvolvedor focado em React, TypeScript, JavaScript, HTML, CSS, com experiencia em interfaces responsivas, integracao de APIs e projetos praticos alinhados a Junior Frontend Developer."
+  },
+  "skills": {
+    "technicalText": "React · TypeScript · JavaScript · HTML · CSS · Git · Figma · Responsive Design"
+  },
+  "experience": [
+    {
+      "title": "Desenvolvedor Frontend / Full Stack",
+      "company": "Bradesco Seguros",
+      "period": "Nov 2023 - Dez 2025",
+      "bullets": [
+        "Desenvolveu e manteve interfaces corporativas, integracoes e servicos utilizando Angular, React, TypeScript, JavaScript, Node.js, Java e APIs REST.",
+        "Participou de code reviews, Pull Requests, testes automatizados, SonarQube, Git/Bitbucket, CI/CD e documentacao tecnica.",
+        "Apoiou a integracao inicial de arquitetura de microfrontends e a documentacao da abordagem para equipes terceiras.",
+        "Construiu telas, componentes reutilizaveis e formularios com validacoes, estados de carregamento, estados de erro e feedbacks claros."
+      ]
+    },
+    {
+      "title": "Desenvolvedor Frontend / Full Stack",
+      "company": "Lacere Agencia",
+      "period": "2022 - Presente",
+      "bullets": [
+        "Desenvolveu interfaces e aplicacoes web sob demanda utilizando React, TypeScript, Vite.js, Node.js e APIs REST.",
+        "Construiu telas modernas, reutilizaveis e responsivas a partir de mockups, prototipos e guidelines de marca.",
+        "Colaborou com designer e cliente internacional, alinhando requisitos, implementacao, criterios de aceite e ajustes iterativos.",
+        "Consumiu APIs externas, tratou erros, estados assincronos, seguranca de dados no front-end e otimizacao de carregamento."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sistema de Telemetria",
+      "description": "Dashboard responsivo para monitoramento de dados meteorologicos em tempo real, conectando interface, APIs, mensageria e atualizacao assincrona.",
+      "stack": "React, Vite, Node.js, NestJS, MongoDB, RabbitMQ, Docker"
+    },
+    {
+      "name": "Sistema de Agendamento com Controle de Concorrencia",
+      "description": "Aplicacao com fluxo de agendamento, disponibilidade de slots, formularios, validacoes, feedbacks e tratamento visual de conflitos.",
+      "stack": "React, TypeScript, Fastify, Supabase, PostgreSQL, Vitest, Cypress"
+    },
+    {
+      "name": "WeekFlow",
+      "description": "Aplicacao pessoal de produtividade com planejamento semanal, priorizacao de tarefas, persistencia local e melhorias iterativas de UX.",
+      "stack": "React, TypeScript, Vite, Context API, Local Storage"
+    }
+  ],
+  "education": [
+    {
+      "institution": "IBMR",
+      "course": "Analise e Desenvolvimento de Sistemas",
+      "period": "2024 - 2026"
+    }
+  ],
+  "certifications": [
+    "AWS Certified Cloud Practitioner - Amazon Web Services (2025)"
+  ],
+  "languages": [
+    "Ingles - C1 (EF SET)",
+    "Portugues - Nativo"
+  ]
+}

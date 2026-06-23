@@ -125,7 +125,12 @@ async function main(): Promise<void> {
 
   if (command === "cv:generate-data") {
     const job = requireStringFlag(flags, "job");
-    const { outputPath, data } = await generateCvDataWorkflow(job);
+    const { outputPath, data, provider, skippedOpenAI, skippedOllama, validationStatus } =
+      await generateCvDataWorkflow(job);
+    console.log(`Selected LLM provider: ${provider}`);
+    console.log(`OpenAI skipped: ${skippedOpenAI ? "yes" : "no"}`);
+    console.log(`Ollama skipped: ${skippedOllama ? "yes" : "no"}`);
+    console.log(`Validation: ${validationStatus}`);
     console.log(`Generated CV data: ${outputPath}`);
     console.log(`Target role: ${data.basics.targetRole}`);
     console.log(`Experience entries: ${data.experience.length}`);

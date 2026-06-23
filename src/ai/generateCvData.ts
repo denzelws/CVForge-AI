@@ -1,4 +1,5 @@
-import { generateJsonWithOpenAI } from "../llm/openaiClient.js";
+import { createLlmProvider } from "../llm/createLlmProvider.js";
+import { LlmProviderName } from "../llm/LlmProvider.js";
 import { GeneratedCvData, GeneratedCvDataSchema } from "../schemas/generatedCvData.schema.js";
 import { JobAnalysis } from "../schemas/jobAnalysis.schema.js";
 import { MatchReport } from "../schemas/matchReport.schema.js";
@@ -11,19 +12,17 @@ export type GenerateCvDataInput = {
   matchReport: MatchReport;
 };
 
-export async function generateCvData(input: GenerateCvDataInput): Promise<GeneratedCvData> {
-  const result = await generateJsonWithOpenAI({
-    systemPrompt: input.prompt,
-    userPrompt: JSON.stringify(
-      {
-        profile: input.profile,
-        jobAnalysis: input.jobAnalysis,
-        matchReport: input.matchReport
-      },
-      null,
-      2
-    )
-  });
+export type GenerateCvDataResult = {
+  data: GeneratedCvData;
+  provider: LlmProviderName;
+};
 
-  return GeneratedCvDataSchema.parse(result);
+export async function generateCvData(input: GenerateCvDataInput): Promise<GenerateCvDataResult> {
+  const provider = createLlmProvider();
+  const result = await provider.generateCvDataJson(input);
+
+  return {
+    data: GeneratedCvDataSchema.parse(result),
+    provider: provider.name
+  };
 }

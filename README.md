@@ -40,13 +40,16 @@ Supported variables:
 
 ```env
 NODE_ENV=development
+LLM_PROVIDER=mock
 OPENAI_API_KEY=
 OPENAI_MODEL=
 OPENAI_TEMPERATURE=0.2
 OPENAI_MAX_OUTPUT_TOKENS=2500
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=
 ```
 
-`OPENAI_API_KEY` is only required for LLM commands such as:
+`OPENAI_API_KEY` is only required when `LLM_PROVIDER=openai` and an LLM command is run.
 
 ```bash
 yarn cv:generate-data -- --job example-frontend-jr
@@ -54,6 +57,47 @@ yarn cv:generate-data -- --job example-frontend-jr
 
 Non-LLM commands such as `profile:validate`, `job:analyze`, `job:match`, and `render:test` do not require
 an OpenAI key.
+
+### LLM Providers
+
+Mock mode is the default for local development and does not call any external service:
+
+```env
+LLM_PROVIDER=mock
+```
+
+```bash
+yarn cv:generate-data -- --job example-frontend-jr
+```
+
+OpenAI mode uses the OpenAI API and requires a Platform API key with available API quota:
+
+```env
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your_project_key
+OPENAI_MODEL=gpt-4o-mini
+```
+
+ChatGPT Plus or Codex usage does not include API usage. Keep API keys server-side/local only and rotate them
+if exposed.
+
+Ollama mode uses a local model and does not require OpenAI billing:
+
+```env
+LLM_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.2:3b
+```
+
+At a high level:
+
+```bash
+ollama pull llama3.2:3b
+yarn cv:generate-data -- --job example-frontend-jr
+```
+
+Local models may be less reliable at strict JSON generation. CVForge validates the returned JSON and checks
+facts against the profile, so Ollama output may fail validation and need prompt/model iteration.
 
 ## Install
 
