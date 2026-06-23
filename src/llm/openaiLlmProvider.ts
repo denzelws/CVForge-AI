@@ -11,7 +11,8 @@ export class OpenAiLlmProvider implements LlmProvider {
         {
           profile: input.profile,
           jobAnalysis: input.jobAnalysis,
-          matchReport: input.matchReport
+          matchReport: input.matchReport,
+          deterministicSkeleton: input.skeleton
         },
         null,
         2

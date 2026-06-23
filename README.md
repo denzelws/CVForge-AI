@@ -47,6 +47,9 @@ OPENAI_TEMPERATURE=0.2
 OPENAI_MAX_OUTPUT_TOKENS=2500
 OLLAMA_BASE_URL=http://localhost:11434
 OLLAMA_MODEL=
+OLLAMA_TIMEOUT_MS=120000
+OLLAMA_NUM_PREDICT=900
+OLLAMA_ALLOW_SKELETON_FALLBACK=false
 ```
 
 `OPENAI_API_KEY` is only required when `LLM_PROVIDER=openai` and an LLM command is run.
@@ -87,6 +90,9 @@ Ollama mode uses a local model and does not require OpenAI billing:
 LLM_PROVIDER=ollama
 OLLAMA_BASE_URL=http://localhost:11434
 OLLAMA_MODEL=llama3.2:3b
+OLLAMA_TIMEOUT_MS=120000
+OLLAMA_NUM_PREDICT=900
+OLLAMA_ALLOW_SKELETON_FALLBACK=false
 ```
 
 At a high level:
@@ -98,6 +104,17 @@ yarn cv:generate-data -- --job example-frontend-jr
 
 Local models may be less reliable at strict JSON generation. CVForge validates the returned JSON and checks
 facts against the profile, so Ollama output may fail validation and need prompt/model iteration.
+
+For faster and safer local generation, CVForge first builds a deterministic CV data skeleton from the
+validated profile, job analysis, and match report. Ollama receives only that skeleton plus compact job focus
+metadata, then may rewrite selected text fields. If local generation times out or returns invalid JSON, you
+can allow a validated skeleton fallback:
+
+```bash
+LLM_PROVIDER=ollama OLLAMA_MODEL=llama3.2:3b OLLAMA_ALLOW_SKELETON_FALLBACK=true yarn cv:generate-data --job example-frontend-jr
+```
+
+Invalid Ollama JSON is saved under `data/generated/debug/` for inspection and is ignored by Git.
 
 ## Install
 

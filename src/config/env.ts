@@ -6,6 +6,11 @@ dotenv.config({ override: false, quiet: true });
 const DEFAULT_OPENAI_MODEL = "gpt-4o-mini";
 const DEFAULT_OLLAMA_BASE_URL = "http://localhost:11434";
 
+const BooleanEnvSchema = z
+  .enum(["true", "false", "1", "0", "yes", "no"])
+  .default("false")
+  .transform((value) => value === "true" || value === "1" || value === "yes");
+
 const EnvSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   LLM_PROVIDER: z.enum(["mock", "openai", "ollama"]).default("mock"),
@@ -14,7 +19,10 @@ const EnvSchema = z.object({
   OPENAI_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.2),
   OPENAI_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(2500),
   OLLAMA_BASE_URL: z.string().url().default(DEFAULT_OLLAMA_BASE_URL),
-  OLLAMA_MODEL: z.string().optional()
+  OLLAMA_MODEL: z.string().optional(),
+  OLLAMA_TIMEOUT_MS: z.coerce.number().int().positive().default(120000),
+  OLLAMA_NUM_PREDICT: z.coerce.number().int().positive().default(900),
+  OLLAMA_ALLOW_SKELETON_FALLBACK: BooleanEnvSchema
 });
 
 export type AppEnv = z.infer<typeof EnvSchema>;
@@ -34,7 +42,10 @@ function normalizeEnv(env: NodeJS.ProcessEnv): Record<string, string | undefined
     OPENAI_TEMPERATURE: env.OPENAI_TEMPERATURE || undefined,
     OPENAI_MAX_OUTPUT_TOKENS: env.OPENAI_MAX_OUTPUT_TOKENS || undefined,
     OLLAMA_BASE_URL: env.OLLAMA_BASE_URL || undefined,
-    OLLAMA_MODEL: env.OLLAMA_MODEL || undefined
+    OLLAMA_MODEL: env.OLLAMA_MODEL || undefined,
+    OLLAMA_TIMEOUT_MS: env.OLLAMA_TIMEOUT_MS || undefined,
+    OLLAMA_NUM_PREDICT: env.OLLAMA_NUM_PREDICT || undefined,
+    OLLAMA_ALLOW_SKELETON_FALLBACK: env.OLLAMA_ALLOW_SKELETON_FALLBACK || undefined
   };
 }
 
