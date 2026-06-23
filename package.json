@@ -10,6 +10,7 @@
     "profile:validate": "tsc && node dist/cli.js profile:validate",
     "job:analyze": "tsc && node dist/cli.js job:analyze",
     "job:match": "tsc && node dist/cli.js job:match",
+    "cv:generate-data": "tsc && node dist/cli.js cv:generate-data",
     "generate": "tsc && node dist/cli.js generate",
     "build": "tsc",
     "typecheck": "tsc --noEmit"

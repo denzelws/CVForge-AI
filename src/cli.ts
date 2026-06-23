@@ -1,4 +1,5 @@
 import { analyzeJobWorkflow } from "./workflow/analyzeJobWorkflow.js";
+import { generateCvDataWorkflow } from "./workflow/generateCvDataWorkflow.js";
 import { generateCvWorkflow } from "./workflow/generateCvWorkflow.js";
 import { matchJobWorkflow } from "./workflow/matchJobWorkflow.js";
 import { renderTestWorkflow } from "./workflow/renderTestWorkflow.js";
@@ -49,6 +50,7 @@ Commands:
   yarn profile:validate
   yarn job:analyze -- --job example-frontend-jr
   yarn job:match -- --job example-frontend-jr
+  yarn cv:generate-data -- --job example-frontend-jr
   npm run generate -- --template frontend-model --job example-frontend-jr
 `);
 }
@@ -118,6 +120,16 @@ async function main(): Promise<void> {
     console.log(`Recommended projects: ${report.recommendedProjects.join(", ") || "none"}`);
     console.log(`Recommended experience: ${report.recommendedExperience.join(", ") || "none"}`);
     console.log(`Output: ${outputPath}`);
+    return;
+  }
+
+  if (command === "cv:generate-data") {
+    const job = requireStringFlag(flags, "job");
+    const { outputPath, data } = await generateCvDataWorkflow(job);
+    console.log(`Generated CV data: ${outputPath}`);
+    console.log(`Target role: ${data.basics.targetRole}`);
+    console.log(`Experience entries: ${data.experience.length}`);
+    console.log(`Projects: ${data.projects.length}`);
     return;
   }
 

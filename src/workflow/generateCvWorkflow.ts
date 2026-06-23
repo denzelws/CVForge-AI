@@ -1,17 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { paths, resolveTemplateName } from "../config.js";
-import { analyzeJob } from "../ai/analyzeJob.js";
-import { generateCvData } from "../ai/generateCvData.js";
-import { validateCvData } from "../ai/validateCvData.js";
 import { renderDocx } from "../docx/renderDocx.js";
-import { ProfileSchema } from "../schemas/profile.schema.js";
+import { GeneratedCvDataSchema } from "../schemas/generatedCvData.schema.js";
+import { readJsonFile } from "../utils/readJsonFile.js";
 
 export function generateCvWorkflow(templateInput: string, jobInput: string): string {
   const templateName = resolveTemplateName(templateInput);
   const jobName = jobInput.replace(/\.txt$/i, "");
-  const profilePath = path.join(paths.data, "profile.base.json");
-  const jobPath = path.join(paths.jobs, `${jobName}.txt`);
+  const cvDataPath = path.join(paths.data, "generated", `${jobName}.cv-data.json`);
   const preparedTemplatePath = path.join(paths.templatesPrepared, `${templateName}.docx`);
   const outputPath = path.join(paths.outputs, `${templateName}-${jobName}.docx`);
 
@@ -19,13 +16,13 @@ export function generateCvWorkflow(templateInput: string, jobInput: string): str
     throw new Error(`Prepared template not found: ${preparedTemplatePath}`);
   }
 
-  if (!fs.existsSync(jobPath)) {
-    throw new Error(`Job description not found: ${jobPath}`);
+  if (!fs.existsSync(cvDataPath)) {
+    throw new Error(
+      `Generated CV data not found: ${cvDataPath}. Run yarn cv:generate-data -- --job ${jobName} first.`
+    );
   }
 
-  const profile = ProfileSchema.parse(JSON.parse(fs.readFileSync(profilePath, "utf8")));
-  const job = analyzeJob(fs.readFileSync(jobPath, "utf8"));
-  const cvData = validateCvData(generateCvData(profile, job));
+  const cvData = readJsonFile(cvDataPath, GeneratedCvDataSchema);
 
   renderDocx(preparedTemplatePath, cvData, outputPath);
   fs.writeFileSync(

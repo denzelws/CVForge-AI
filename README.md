@@ -26,7 +26,34 @@ Not included yet:
 - PDF export
 - job tracking
 - LangGraph
-- real LLM calls
+
+## Environment And API Keys
+
+CVForge AI currently runs as a development-only CLI tool. It does not include a frontend, backend API,
+authentication, database, or deployment setup.
+
+Create a local `.env` or export variables in your shell when running LLM commands. Never commit `.env`.
+Use project-based API keys for this app, and do not expose API keys in frontend or client-side code.
+Rotate any key immediately if it is exposed.
+
+Supported variables:
+
+```env
+NODE_ENV=development
+OPENAI_API_KEY=
+OPENAI_MODEL=
+OPENAI_TEMPERATURE=0.2
+OPENAI_MAX_OUTPUT_TOKENS=2500
+```
+
+`OPENAI_API_KEY` is only required for LLM commands such as:
+
+```bash
+yarn cv:generate-data -- --job example-frontend-jr
+```
+
+Non-LLM commands such as `profile:validate`, `job:analyze`, `job:match`, and `render:test` do not require
+an OpenAI key.
 
 ## Install
 
@@ -167,4 +194,5 @@ outputs/frontend-model-example-frontend-jr.json
 8. It creates structured CV JSON.
 9. It renders that JSON into `templates/prepared/<template>.docx`.
 
-The first implementation uses deterministic local functions in `src/ai/`. Those modules are intentionally shaped so they can later be replaced by LLM calls that still return schema-validated JSON only.
+The current workflow keeps analysis and matching deterministic, then uses a direct OpenAI call only for
+`cv:generate-data`. LLM output is schema-validated and fact-checked before it is written to disk.
